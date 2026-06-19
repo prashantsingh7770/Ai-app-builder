@@ -18,7 +18,6 @@ import { PricingModal } from "@/components/PricingModal";
 import type { Message, StatusStep } from "@/types/workspace";
 import { createClient } from "@supabase/supabase-js";
 import { BlueTitle } from "./reusables";
-import Image from "next/image";
 
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
 const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
@@ -212,13 +211,9 @@ export function ChatPanel({
                   </div>
                 ) : (
                   <div className="flex items-start gap-2">
-                    <Image
-                      src="/logo-short.jpeg"
-                      alt="Forge"
-                      width={24}
-                      height={24}
-                      className="mt-0.5 h-6 w-6 shrink-0 rounded-md"
-                    />
+                    <div className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-md bg-gradient-to-tr from-blue-600 to-indigo-500 text-[10px] font-black text-white select-none shadow-sm shadow-indigo-500/20">
+                      N
+                    </div>
                     <div className="min-w-0 rounded-2xl rounded-tl-sm bg-white/5 px-3.5 py-2.5">
                       {isLiveStream && !msg.content ? (
                         // Empty placeholder — show Cline thinking indicator
@@ -259,13 +254,9 @@ export function ChatPanel({
           {/* Live status steps — only shown during normal generation */}
           {isGenerating && (
             <div className="flex items-start gap-2">
-              <Image
-                src="/logo-short.jpeg"
-                alt="Forge"
-                width={24}
-                height={24}
-                className="mt-0.5 h-6 w-6 shrink-0 rounded-md"
-              />
+              <div className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-md bg-gradient-to-tr from-blue-600 to-indigo-500 text-[10px] font-black text-white select-none shadow-sm shadow-indigo-500/20">
+                N
+              </div>
               <div className="rounded-2xl rounded-tl-sm bg-white/5 px-3.5 py-3">
                 <div className="space-y-2">
                   {statusLog.map((step, i) => (

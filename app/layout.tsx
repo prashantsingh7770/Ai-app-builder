@@ -21,8 +21,8 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Forge - AI App Builder",
-  description: "",
+  title: "NexaAI - AI App Builder",
+  description: "NexaAI is a powerful full-stack agentic AI App Builder.",
   icons: {
     icon: "/logo-short.jpeg",
   },
